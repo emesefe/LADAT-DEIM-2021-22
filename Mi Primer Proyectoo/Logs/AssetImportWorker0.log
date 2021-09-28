@@ -163,3 +163,11 @@ Received Import Request.
 Start importing Assets/Prefabs/iante Variantt.prefab using Guid(46668d6e09cd1434aa1afdcb6baee819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd850e9154cf2b70f3abda20c48bb06d9') in 0.013260 seconds 
   Import took 0.016263 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 3303.047618 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(d69389b2303b24d158b9a288c60e7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(d69389b2303b24d158b9a288c60e7007) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09fe343d0cf6ca4d44f3df22f090f50a') in 0.001734 seconds 
+  Import took 0.004857 seconds .
+
