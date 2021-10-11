@@ -244,6 +244,7 @@ MonoBehaviour:
   y: 3
   z: 3
   isRaining: 0
+  playerHP: 0
 --- !u!65 &784621656
 BoxCollider:
   m_ObjectHideFlags: 0
