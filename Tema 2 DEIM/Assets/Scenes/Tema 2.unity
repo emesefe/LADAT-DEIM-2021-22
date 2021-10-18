@@ -238,13 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337fc682c292846568885b45a20b8c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Maria
-  enemyName: Maria
+  playerName: Alba
   x: 5
-  y: 3
-  z: 3
-  isRaining: 0
-  playerHP: 0
+  y: 1
 --- !u!65 &784621656
 BoxCollider:
   m_ObjectHideFlags: 0
