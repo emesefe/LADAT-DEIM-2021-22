@@ -31,6 +31,7 @@ public class MyFirstScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        x -= y;
         // transform.position = new Vector3(0, 0, 0);
         transform.position = Vector3.zero;
         
