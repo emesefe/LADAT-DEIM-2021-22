@@ -52,10 +52,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\MyFirstScript.cs" />
-     <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
+     <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\Bisiesto.cs" />
+     <Compile Include="Assets\Scripts\MyFirstScript.cs" />
+     <Compile Include="Assets\Scripts\SayHello.cs" />
+     <Compile Include="Assets\Scripts\GuessTheNumber.cs" />
+     <Compile Include="Assets\Scripts\PatataCaliente.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.19f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
