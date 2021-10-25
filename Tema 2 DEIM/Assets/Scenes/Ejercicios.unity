@@ -395,7 +395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &368957484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,13 +537,14 @@ GameObject:
   - component: {fileID: 810530980}
   - component: {fileID: 810530979}
   - component: {fileID: 810530984}
+  - component: {fileID: 810530985}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &810530979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,7 +552,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810530978}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 539bc7a8a9f8b4824a846ad262c60a68, type: 3}
   m_Name: 
@@ -639,9 +640,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810530978}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 373ff970f416342c5aa8fa84ec82e60f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &810530985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810530978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df77c40d805d84f4688603efbb8bbdc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1420214519
@@ -657,6 +670,7 @@ GameObject:
   - component: {fileID: 1420214522}
   - component: {fileID: 1420214521}
   - component: {fileID: 1420214524}
+  - component: {fileID: 1420214525}
   m_Layer: 5
   m_Name: InputField
   m_TagString: Untagged
@@ -795,12 +809,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420214519}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa1e939c4d1f4ea8b80122619c6e397, type: 3}
+  m_Script: {fileID: 11500000, guid: fb6c9c426269a4719b170e2ee79f7f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  year: 2020
+  playerName: 
+--- !u!114 &1420214525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420214519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ea34945ad1a484fb06d7bdab43e489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1760861810
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,7 +845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1760861811
 MonoBehaviour:
   m_ObjectHideFlags: 0
