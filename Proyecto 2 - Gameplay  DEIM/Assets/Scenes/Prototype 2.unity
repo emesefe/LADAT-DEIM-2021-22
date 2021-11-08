@@ -552,10 +552,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalPrefabs:
-  - {fileID: 120214, guid: 9bf484c5ec3d3bf43b2034c829f1abbe, type: 3}
   - {fileID: 187040, guid: 05554c72f25b7364caea91a88803135d, type: 3}
+  - {fileID: 120214, guid: 9bf484c5ec3d3bf43b2034c829f1abbe, type: 3}
   - {fileID: 148086, guid: 72d1e1ec46e639c47a81658b0d9e230e, type: 3}
   spawnPos: {x: 0, y: 0, z: 20}
+  animalIndex: 0
+  randomX: 0
 --- !u!4 &848732315
 Transform:
   m_ObjectHideFlags: 0
