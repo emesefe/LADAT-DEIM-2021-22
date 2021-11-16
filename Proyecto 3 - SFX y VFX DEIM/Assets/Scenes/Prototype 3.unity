@@ -505,6 +505,7 @@ MonoBehaviour:
   jumpForce: 500
   gravityModifier: 0.9
   isOnTheGround: 1
+  gameOver: 0
 --- !u!54 &1341019413
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -563,10 +564,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98fe85cf550b9422fa188a4bb789f4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab: {fileID: 5106299546190995893, guid: 27d425731218d4059bc1fa2b6bbdb869,
-    type: 3}
   startDelay: 2
   repeatRate: 2
+  obstaclePrefabs:
+  - {fileID: 5106299546190995893, guid: 27d425731218d4059bc1fa2b6bbdb869, type: 3}
+  - {fileID: 9200763857159246397, guid: 77224a6f3b3744493a11a5c6d6e66e33, type: 3}
+  - {fileID: 9119578803982460609, guid: 5a9c26c4f7c43431c8006382d869b961, type: 3}
+  - {fileID: 9129786818876232810, guid: 78c9ffcdf8936405d857e89eb894a4e8, type: 3}
 --- !u!4 &1902230805
 Transform:
   m_ObjectHideFlags: 0
