@@ -5,27 +5,29 @@ using UnityEngine;
 
 public class MoveLeft : MonoBehaviour
 {
-    public float speed = 30;
+    public float speed = 5f;
 
     private PlayerController playerControllerScript;
+    private float lowerLimit = -1;
     
-    // Start is called before the first frame update
     void Start()
     {
+        // Nos comunicamos con el script PlayerController
         playerControllerScript = GameObject.Find("Player").
             GetComponent<PlayerController>();
     }
 
-    
     void Update()
     {
+        // Movemos a la izquierda
         if (!playerControllerScript.gameOver)
         {
             transform.Translate(Vector3.left * 
                                 speed * Time.deltaTime);
         }
-
-        if (transform.position.y < -1)
+        
+        // Eliminar Game Objects no necesarios
+        if (transform.position.y < lowerLimit)
         {
             Destroy(gameObject);
         }
