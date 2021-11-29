@@ -6,10 +6,14 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     private float timeDestroy = 2f;
+    private GameManager gameManagerScript;
+    
     void Start()
     {
         // Destruye el objeto tras 2 segundos
         Destroy(gameObject, timeDestroy);
+
+        gameManagerScript = FindObjectOfType<GameManager>();
     }
 
     private void OnMouseDown()
@@ -17,14 +21,14 @@ public class Target : MonoBehaviour
         if (gameObject.CompareTag("Good"))
         {
             Destroy(gameObject);
-            
+
             // Dar puntos
             // Sistema de partículas
             // Musiquita de ¡bien hecho!
         }else if (gameObject.CompareTag("Bad"))
         {
             Destroy(gameObject);
-            
+
             // Game Over
             // Restar puntos
             // Quitar vida
@@ -33,5 +37,10 @@ public class Target : MonoBehaviour
             
         }
         
+    }
+
+    private void OnDestroy()
+    {
+        gameManagerScript.targetPositions.Remove(transform.position);
     }
 }
