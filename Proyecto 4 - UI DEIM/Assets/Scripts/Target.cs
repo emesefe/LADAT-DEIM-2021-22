@@ -7,6 +7,9 @@ public class Target : MonoBehaviour
 {
     private float timeDestroy = 2f;
     private GameManager gameManagerScript;
+
+    [SerializeField] private int points;
+    public ParticleSystem explosionParticle;
     
     void Start()
     {
@@ -18,24 +21,43 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (!gameManagerScript.gameOver)
+        {
+            // Dar o quitar puntos
+            gameManagerScript.UpdateScore(points);
+            
+            Instantiate(explosionParticle, 
+                transform.position, 
+                explosionParticle.transform.rotation);
+        }
+        
         if (gameObject.CompareTag("Good"))
         {
             Destroy(gameObject);
 
-            // Dar puntos
-            // Sistema de partículas
             // Musiquita de ¡bien hecho!
+            
         }else if (gameObject.CompareTag("Bad"))
         {
             Destroy(gameObject);
+            gameManagerScript.missCounter += 1;
+
+            if (gameManagerScript.missCounter >= gameManagerScript.totalMisses)
+            {
+                gameManagerScript.GameOver();
+            }
 
             // Game Over
             // Restar puntos
             // Quitar vida
             // Musiquita de Game Over o mal hecho
             // Sistema de partículas
-            
+
         }
+        
+        
+
+        
         
     }
 

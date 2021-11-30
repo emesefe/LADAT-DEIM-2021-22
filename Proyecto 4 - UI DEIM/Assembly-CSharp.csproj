@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Target.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\DestroyAfterTime.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
@@ -671,6 +672,12 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Users/mariasantos/Developer/GitHub/LADAT-DEIM-2021-22/Proyecto 4 - UI DEIM/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/mariasantos/Developer/GitHub/LADAT-DEIM-2021-22/Proyecto 4 - UI DEIM/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/mariasantos/Developer/GitHub/LADAT-DEIM-2021-22/Proyecto 4 - UI DEIM/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
