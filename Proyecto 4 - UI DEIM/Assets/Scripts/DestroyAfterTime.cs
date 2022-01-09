@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class DestroyAfterTime : MonoBehaviour
 {
-    private float timeDestroy = 2f;
+    private float lifeTime = 2f;
     void Start()
     {
-        // Destruye el objeto tras 2 segundos
-        Destroy(gameObject, timeDestroy);
+        Destroy(gameObject, lifeTime);
     }
 }

@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public bool gameOver;
     public GameObject[] targetPrefabs;
     public Vector3 randomSpawnPos;
-    public List<Vector3> targetPositions;
+    public List<Vector3> targetPositions; // Lista que guarda las posiciones ocupadas en la rejilla
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
 
@@ -20,9 +20,9 @@ public class GameManager : MonoBehaviour
     private float spaceBetweenSquares = 2.5f;
     private int numberRows = 4;
     private float spawnRate = 1f;
-    private int score;
-    public int missCounter;
-    public int totalMisses = 3;
+    private int score; // Puntuación del jugador
+    public int missCounter; // Contador de las veces que le damos a un objeto Bad
+    public int totalMisses = 3; // Número máximo de veces que podemos darle a un objeto Bad
 
     private void Start()
     {
@@ -30,12 +30,13 @@ public class GameManager : MonoBehaviour
         score = 0;
         UpdateScore(0);
         missCounter = 0;
+        gameOver = false;
         gameOverText.gameObject.SetActive(false);
     }
 
     public Vector3 RandomSpawnPosition()
     {
-        // Genera una posición aleatoria en uno de los centros de los 16 cuadrados
+        // Genera una posición aleatoria en uno de los centros de los 16 cuadrados de la rejilla
         int randomIntX = Random.Range(0, numberRows);
         int randomIntY = Random.Range(0, numberRows);
         float randomPosX = minX + randomIntX * spaceBetweenSquares;

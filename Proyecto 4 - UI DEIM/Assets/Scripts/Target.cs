@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class Target : MonoBehaviour
 {
-    private float timeDestroy = 2f;
+    public ParticleSystem explosionParticle;
+    
+    private float timeDestroy = 2f; // Tiempo que tardará en destruirse el target por sí solo
     private GameManager gameManagerScript;
 
-    [SerializeField] private int points;
-    public ParticleSystem explosionParticle;
+    [SerializeField] private int points; // Puntos que da el target
     
     void Start()
     {
@@ -25,40 +26,30 @@ public class Target : MonoBehaviour
         {
             // Dar o quitar puntos
             gameManagerScript.UpdateScore(points);
-            
-            Instantiate(explosionParticle, 
-                transform.position, 
+
+            Instantiate(explosionParticle,
+                transform.position,
                 explosionParticle.transform.rotation);
-        }
-        
-        if (gameObject.CompareTag("Good"))
-        {
+
             Destroy(gameObject);
 
-            // Musiquita de ¡bien hecho!
-            
-        }else if (gameObject.CompareTag("Bad"))
-        {
-            Destroy(gameObject);
-            gameManagerScript.missCounter += 1;
-
-            if (gameManagerScript.missCounter >= gameManagerScript.totalMisses)
+            if (gameObject.CompareTag("Good"))
             {
-                gameManagerScript.GameOver();
+                // Musiquita de ¡bien hecho!
             }
+            else if (gameObject.CompareTag("Bad"))
+            {
+                gameManagerScript.missCounter += 1;
 
-            // Game Over
-            // Restar puntos
-            // Quitar vida
-            // Musiquita de Game Over o mal hecho
-            // Sistema de partículas
+                // Se da Game Over si le damos 3 veces a un objeto Bad
+                if (gameManagerScript.missCounter >= gameManagerScript.totalMisses)
+                {
+                    gameManagerScript.GameOver();
+                }
 
+                // Musiquita de Game Over o mal hecho
+            }
         }
-        
-        
-
-        
-        
     }
 
     private void OnDestroy()
