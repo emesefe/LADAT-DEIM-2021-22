@@ -5,6 +5,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class GameManager : MonoBehaviour
     public Vector3 randomSpawnPos;
     public List<Vector3> targetPositions; // Lista que guarda las posiciones ocupadas en la rejilla
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI gameOverText;
+    public GameObject gameOverPanel;
+    public GameObject menuPanel;
 
     private float minX = -3.75f;
     private float minY = -3.75f;
@@ -23,15 +25,12 @@ public class GameManager : MonoBehaviour
     private int score; // Puntuación del jugador
     public int missCounter; // Contador de las veces que le damos a un objeto Bad
     public int totalMisses = 3; // Número máximo de veces que podemos darle a un objeto Bad
+    public float timeDestroy = 2f; // Tiempo que tardará en destruirse el target por sí solo
 
     private void Start()
     {
-        StartCoroutine("SpawnRandomTarget");
-        score = 0;
-        UpdateScore(0);
-        missCounter = 0;
-        gameOver = false;
-        gameOverText.gameObject.SetActive(false);
+        menuPanel.SetActive(true);
+        gameOverPanel.SetActive(false);
     }
 
     public Vector3 RandomSpawnPosition()
@@ -76,6 +75,27 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOver = true;
-        gameOverText.gameObject.SetActive(true);
+        gameOverPanel.SetActive(true);
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StartGame(int difficulty)
+    {
+        score = 0;
+        UpdateScore(0);
+        missCounter = 0;
+        gameOver = false;
+        gameOverPanel.SetActive(false);
+        menuPanel.SetActive(false);
+        spawnRate = 1;
+        spawnRate /= difficulty;
+        timeDestroy = 2;
+        timeDestroy /= difficulty;
+        StartCoroutine("SpawnRandomTarget");
+    }
+    
 }

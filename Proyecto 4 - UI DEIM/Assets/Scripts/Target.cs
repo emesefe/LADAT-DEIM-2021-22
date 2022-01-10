@@ -7,7 +7,6 @@ public class Target : MonoBehaviour
 {
     public ParticleSystem explosionParticle;
     
-    private float timeDestroy = 2f; // Tiempo que tardará en destruirse el target por sí solo
     private GameManager gameManagerScript;
 
     [SerializeField] private int points; // Puntos que da el target
@@ -15,7 +14,7 @@ public class Target : MonoBehaviour
     void Start()
     {
         // Destruye el objeto tras 2 segundos
-        Destroy(gameObject, timeDestroy);
+        Destroy(gameObject, gameManagerScript.timeDestroy);
 
         gameManagerScript = FindObjectOfType<GameManager>();
     }
