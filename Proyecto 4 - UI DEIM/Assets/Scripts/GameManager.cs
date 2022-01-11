@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public Vector3 randomSpawnPos;
     public List<Vector3> targetPositions; // Lista que guarda las posiciones ocupadas en la rejilla
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI livesText;
     public GameObject gameOverPanel;
     public GameObject menuPanel;
 
@@ -72,6 +73,11 @@ public class GameManager : MonoBehaviour
         scoreText.text = $"Score: {score}";
     }
 
+    public void UpdateLives()
+    {
+        livesText.text = $"Lives: {totalMisses - missCounter}";
+    }
+
     public void GameOver()
     {
         gameOver = true;
@@ -88,6 +94,7 @@ public class GameManager : MonoBehaviour
         score = 0;
         UpdateScore(0);
         missCounter = 0;
+        UpdateLives();
         gameOver = false;
         gameOverPanel.SetActive(false);
         menuPanel.SetActive(false);

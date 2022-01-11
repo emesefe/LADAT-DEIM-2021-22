@@ -10,13 +10,14 @@ public class Target : MonoBehaviour
     private GameManager gameManagerScript;
 
     [SerializeField] private int points; // Puntos que da el target
+    private bool clickedOnGoodTarget;
     
     void Start()
     {
+        gameManagerScript = FindObjectOfType<GameManager>();
+        
         // Destruye el objeto tras 2 segundos
         Destroy(gameObject, gameManagerScript.timeDestroy);
-
-        gameManagerScript = FindObjectOfType<GameManager>();
     }
 
     private void OnMouseDown()
@@ -26,33 +27,50 @@ public class Target : MonoBehaviour
             // Dar o quitar puntos
             gameManagerScript.UpdateScore(points);
 
+            // Instanciamos el sistema de partículas
             Instantiate(explosionParticle,
                 transform.position,
                 explosionParticle.transform.rotation);
-
+            // Destruimos el objeto
             Destroy(gameObject);
 
             if (gameObject.CompareTag("Good"))
             {
-                // Musiquita de ¡bien hecho!
+                clickedOnGoodTarget = true;
+                // TODO: Musiquita de ¡bien hecho!
             }
             else if (gameObject.CompareTag("Bad"))
             {
-                gameManagerScript.missCounter += 1;
+                IsGameOver();
 
-                // Se da Game Over si le damos 3 veces a un objeto Bad
-                if (gameManagerScript.missCounter >= gameManagerScript.totalMisses)
-                {
-                    gameManagerScript.GameOver();
-                }
+                // TODO: Musiquita de Game Over o mal hecho
+            }
+        }
+    }
+    
+    private void IsGameOver()
+    {
+        if (!gameManagerScript.gameOver)
+        {
+            gameManagerScript.missCounter += 1;
+            gameManagerScript.UpdateLives();
 
-                // Musiquita de Game Over o mal hecho
+            // Se da Game Over si le damos 3 veces a un objeto Bad
+            if (gameManagerScript.missCounter >= gameManagerScript.totalMisses)
+            {
+                gameManagerScript.GameOver();
             }
         }
     }
 
     private void OnDestroy()
     {
+        // Comunicamos a GameManager que la posición ha quedado libre
         gameManagerScript.targetPositions.Remove(transform.position);
+
+        if (gameObject.CompareTag("Good") && !clickedOnGoodTarget)
+        {
+            IsGameOver();
+        }
     }
 }
