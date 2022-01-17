@@ -674,6 +674,9 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>/Users/mariasantos/Developer/GitHub/LADAT-DEIM-2021-22/Elementos UI/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/Users/mariasantos/Developer/GitHub/LADAT-DEIM-2021-22/Elementos UI/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
