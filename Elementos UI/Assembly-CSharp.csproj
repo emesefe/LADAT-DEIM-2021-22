@@ -52,14 +52,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Sci-Fi UI\Demo_Assets\scripts\GUI_Demo.cs" />
-     <Compile Include="Assets\movement.cs" />
-     <Compile Include="Assets\Stylized Astronaut\Character\Player.cs" />
-     <Compile Include="Assets\Stylized Astronaut\Character\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\Imported Assets\Sci-Fi UI\Demo_Assets\scripts\GUI_Demo.cs" />
+     <Compile Include="Assets\Scripts\Otros\movement.cs" />
+     <Compile Include="Assets\Imported Assets\Stylized Astronaut\Character\Player.cs" />
+     <Compile Include="Assets\Imported Assets\Stylized Astronaut\Character\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\Scripts\SliderScript.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
+     <None Include="Assets\Imported Assets\Kevin Iglesias\3DCharacterDummy\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
