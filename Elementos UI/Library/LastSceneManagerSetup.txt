@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ScrollRect&ScrollBar.unity
+- path: Assets/Scenes/Otros/Mixamo.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
