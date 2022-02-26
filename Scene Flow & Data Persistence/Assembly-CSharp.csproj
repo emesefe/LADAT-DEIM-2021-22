@@ -55,10 +55,10 @@
      <Compile Include="Assets\Scripts\Originals\UIManager.cs" />
      <Compile Include="Assets\Scripts\Originals\SayHello.cs" />
      <Compile Include="Assets\Scripts\Originals\SceneFlow.cs" />
+     <Compile Include="Assets\Scripts\UIManagerMenu.cs" />
      <Compile Include="Assets\Scripts\Originals\DataPersistence.cs" />
      <Compile Include="Assets\Scripts\LoadScenes.cs" />
      <Compile Include="Assets\Scripts\PersistentData.cs" />
-     <Compile Include="Assets\Scripts\UIManagerMenu.cs" />
      <Compile Include="Assets\Scripts\SayHola.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

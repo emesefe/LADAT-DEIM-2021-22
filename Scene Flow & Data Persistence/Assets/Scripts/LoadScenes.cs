@@ -16,5 +16,12 @@ public class LoadScenes : MonoBehaviour
     {
         SceneManager.LoadScene("Menu_Start");
     }
+
+    public void ExitGame()
+    {
+        // Guardo lo que quiero
+        Debug.Log("Bye bye");
+        Application.Quit();
+    }
     
 }
