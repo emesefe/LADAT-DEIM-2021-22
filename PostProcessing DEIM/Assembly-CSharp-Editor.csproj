@@ -722,6 +722,12 @@
  <Reference Include="Unity.Mathematics">
  <HintPath>/Users/mariasantos/Developer/GitHub/LADAT-DEIM-2021-22/PostProcessing DEIM/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/mariasantos/Developer/GitHub/LADAT-DEIM-2021-22/PostProcessing DEIM/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/mariasantos/Developer/GitHub/LADAT-DEIM-2021-22/PostProcessing DEIM/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
